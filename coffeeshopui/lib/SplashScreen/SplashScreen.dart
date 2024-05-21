@@ -1,6 +1,6 @@
 import 'package:coffeeshopui/CommonWidget/OurButton.dart';
 import 'package:coffeeshopui/const/const.dart';
-
+import '../CommonWidget/BottomNavBar.dart';
 import '../HomeScreen/HomeScreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       title: "Get Started",
                       textcolor: whitecolor,
                       onpress: () {
-                        Get.to(() => HomeScreen());
+                        Get.to(() => NavBar());
                       }),
                 )
               ],
