@@ -1,3 +1,4 @@
+import 'package:coffeeshopui/CommonWidget/listing.dart';
 import 'package:coffeeshopui/const/const.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var selectedindex = 0;
     return Padding(
       padding: const EdgeInsets.all(6),
       child: Scaffold(
@@ -29,7 +31,24 @@ class HomeScreen extends StatelessWidget {
                   filled: true,
                   border: InputBorder.none),
             ).box.roundedFull.padding(EdgeInsets.all(12)).make(),
-            //
+
+            // Tab Showing tab for different coffee
+
+            Row(
+              children: List.generate(
+                  coffeetype.length,
+                  (index) => "${coffeetype[index]}"
+                      .text
+                      .fontFamily(bold2)
+                      .size(14)
+                      .makeCentered()),
+            )
+                .box
+                .margin(EdgeInsets.symmetric(horizontal: 8))
+                .padding(EdgeInsets.symmetric(horizontal: 12))
+                .rounded
+                .shadow
+                .make()
           ],
         ),
       ),
